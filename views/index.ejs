@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- WEB HOST LOGO  -->
+
+    <link rel="icon" href="assets/icon-ebook.png" type="image/png">
+
+    <!-- REMIX ICONS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- ICON SCOUT-->
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!--FONTS : POPPINS / OUTFIT / MONTAGU / MONTSERRAT-->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Outfit:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- SWIPER JS -->
+
+    <link rel="stylesheet" href="/stylesheets/swiper-bundle.min.css" />
+
+    <!-- AOS JS -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- STYLE-SHEET -->
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <title>E-book</title>
+
+</head>
+
+<body>
+
+
+
+    <!-- ========== NAV / HEADER  ==========-->
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav_logo">
+                <i class="fa-solid fa-book-open-reader"></i> eBook
+            </a>
+
+            <div class="nav_menu">
+                <ul class="nav_list">
+
+                    <li class="nav_item">
+                        <a href="#home" class="nav_link active_link">
+                            <i class="ri-home-4-line"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#featured" class="nav_link">
+                            <i class="ri-book-3-line"></i>
+                            <span>Featured</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#recommended" class="nav_link">
+                            <i class="ri-price-tag-3-line"></i>
+                            <span>Recommended</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#new" class="nav_link">
+                            <i class="ri-bookmark-line"></i>
+                            <span>Latest</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#testimonial" class="nav_link">
+                            <i class="ri-message-3-line"></i>
+                            <span>Review</span>
+                        </a>
+                    </li>
+
+                    <!--<li class="nav_item">
+                        <a href="#" class="nav_link">
+                            <i class="ri-home-line"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>-->
+
+                </ul>
+            </div>
+
+            <div class="nav_actions">
+                <i class="ri-search-line search-button" id="search-button"></i>
+
+                <i class="ri-user-3-line login-button" id="login-button"></i>
+
+                <i class="ri-moon-line theme-button" id="theme-button"></i>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- ========== SEARCH ========== -->
+
+
+
+    <div class="search" id="search-content">
+        <form action="" class="search_form">
+            <!--<i class="ri-search-line search_icon"></i>-->
+            <input type="search" placeholder="looking for something!?" class="search_input">
+        </form>
+
+        <i class="ri-close-line search_close" id="search-close"></i>
+    </div>
+
+
+
+    <!-- ========== LOGIN ========== -->
+
+
+
+    <div class="login grid" id="login-content">
+        <form action="" class="login_form grid">
+            <h3 class="login_title">Log In</h3>
+
+            <div class="login_group grid">
+                <div>
+                    <label for="login-email" class="login_label">Email</label>
+                    <input type="email" placeholder="Write Your Email" id="login-email" class="login_input">
+                </div>
+            </div>
+
+            <div class="login_group grid">
+                <div>
+                    <label for="login-pass" class="login_label">Password</label>
+                    <input type="password" placeholder="Enter Your Password" id="login-pass" class="login_input">
+                </div>
+            </div>
+
+            <div>
+                <span class="login_singup">
+                    You Don't Have An Account!? <a href="#">Sign Up</a>
+                </span>
+
+                <a href="#" class="login_forgot">
+                    You forgot your password
+                </a>
+
+                <button type="submit" class="login_button button">
+                    Log In
+                </button>
+            </div>
+        </form>
+
+        <i class="ri-close-line login_close" id="login-close"></i>
+    </div>
+
+
+
+    <!-- ========== MAIN ========== -->
+
+    <main class="main">
+
+        <!-- ========== HOME ==========-->
+
+        <section class="home section" id="home">
+            <div class="home_container container grid">
+                <div class="home_data" data-aos="fade-in" data-aos-delay="600ms">
+                    <h1 class="home_title">
+                        Discover Your Next Adventure & Explore Endless Worlds of Knowledge.
+                    </h1>
+
+                    <p class="home_description">
+                        Unlock Imagination with Our Diverse Collection.
+                    </p>
+
+                    <a href="#new" class="button buy_button">Explore</a>
+                    <a href="#contact" class="simp explore_button">Buy Now</a>
+                </div>
+
+                <div class="home_images" data-aos="fade-up" data-aos-delay="600ms">
+                    <div class="home_swiper swiper">
+                        <div class="swiper-wrapper">
+
+                            <article class="home_article swiper-slide">
+                                <img src="assets/bookcover_11.jpeg" alt="" class="home_img">
+                            </article>
+                            <article class="home_article swiper-slide">
+                                <img src="assets/bookcover_12.jpeg" alt="" class="home_img">
+                            </article>
+                            <article class="home_article swiper-slide">
+                                <img src="assets/bookcover_13.jpeg" alt="" class="home_img">
+                            </article>
+                            <article class="home_article swiper-slide">
+                                <img src="assets/bookcover_14.jpeg" alt="" class="home_img">
+                            </article>
+                            <article class="home_article swiper-slide">
+                                <img src="assets/bookcover_15.jpeg" alt="" class="home_img">
+                            </article>
+                            <article class="home_article swiper-slide">
+                                <img src="assets/bookcover_16.jpeg" alt="" class="home_img">
+                            </article>
+                            <article class="home_article swiper-slide">
+                                <img src="assets/bookcover_17.jpeg" alt="" class="home_img">
+                            </article>
+                            <article class="home_article swiper-slide">
+                                <img src="assets/bookcover_18.jpeg" alt="" class="home_img">
+                            </article>
+                            <article class="home_article swiper-slide">
+                                <img src="assets/bookcover_19.jpeg" alt="" class="home_img">
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+
+        <section class="services_section" data-aos="fade-in" data-aos-delay="600ms">
+            <div class="services_container container grid">
+                <article class="services_card">
+                    <div class="bg-service">
+                        <img src="assets/delivery-man.png" class="service_card_img" alt="">
+                    </div>
+                    <h3 class="services_title">Free Delivery</h3>
+                    <p class="services_description">Across The Whole Nation</p>
+                </article>
+
+                <article class="services_card">
+                    <div class="bg-service">
+                        <img src="assets/credit-card (1).png" class="service_card_img alt="">
+                    </div>
+                    <h3 class=" services_title">Secure Payments</h3>
+                        <p class="services_description">100% Security on Transitions</p>
+                </article>
+
+                <article class="services_card">
+                    <div class="bg-service">
+                        <img src="assets/support.png" class="service_card_img alt="">
+                    </div>
+                    <h3 class=" services_title">24/7 Support</h3>
+                        <p class="services_description">Call Us Anytime</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- FEATURED SECTION -->
+
+        <section class="features section" id="featured">
+            <h2 class="section_title">
+                <span class="feature">Featured</span> Books;
+            </h2>
+            <p class="features_para">
+                "Dive into handpicked gems – our curated featured book selection."
+            </p>
+
+            <div class="featured_container container" data-aos="fade-up" data-aos-delay="600ms">
+                <div class="featured_swiper swiper">
+                    <div class="swiper-wrapper">
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book1.jpg" alt="">
+
+                            <h2 class="featured_title">Anna North, Outlawed</h2>
+                            <p class="green">R.O Kwon’s</p>
+
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book2.jpg" alt="">
+
+                            <h2 class="featured_title">Three Novels</h2>
+                            <p>Lisa Dillman</p>
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book3.jpg" alt="">
+
+                            <h2 class="featured_title">After the Sun</h2>
+                            <p>Jonas Eika</p>
+
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book4.jpg" alt="">
+
+                            <h2 class="featured_title"> No One Is Talking</h2>
+                            <p>Patricia Lockwood</p>
+
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book5.jpg" alt="">
+
+                            <h2 class="featured_title">The Copenhagen</h2>
+                            <p>Tove Ditlevsen</p>
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book6.jpg" alt="">
+
+                            <h2 class="featured_title">Great Circle</h2>
+                            <p>Maggie Shipstead</p>
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book8.jpg" alt="">
+
+                            <h2 class="featured_title"> Civilizations</h2>
+                            <p>Laurent Binet</p>
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book9.jpg" alt="">
+
+                            <h2 class="featured_title"> The Liar’s Dictionary</h2>
+                            <p>Eley Williams</p>
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- RECOMMENDED SECTION -->
+        <section class="features section" id="recommended">
+            <h2 class="section_title">
+                <span class="feature">Recommended</span> Books;
+            </h2>
+            <p class="features_para">
+                "A touch of personalization and highlights the quality of the recommended selections."
+            </p>
+
+            <div class="featured_container container" data-aos="fade-up" data-aos-delay="600ms">
+                <div class="featured_swiper swiper">
+                    <div class="swiper-wrapper">
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book10.jpg" alt="">
+
+                            <h2 class="featured_title">Assembly</h2>
+                            <p>Natasha Brown</p>
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book11.jpg" alt="">
+
+                            <h2 class="featured_title">My Mess Is a Bit</h2>
+                            <p>Georgia Pritchett</p>
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book14.jpg" alt="">
+
+                            <h2 class="featured_title">Field Study</h2>
+                            <p>Chet’la Sebree</p>
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book15.jpg" alt="">
+
+                            <h2 class="featured_title">Chronicles</h2>
+                            <p>Wole Soyinka</p>
+
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book17.jpg" alt="">
+
+                            <h2 class="featured_title"> God of Mercy</h2>
+                            <p>Okezie Nwoka</p>
+
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book18.jpg" alt="">
+
+                            <h2 class="featured_title"> The Divines</h2>
+                            <p>Ellie Eaton</p>
+
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book19.jpg" alt="">
+
+                            <h2 class="featured_title">Somebody's</h2>
+                            <p>Ashley C. Ford</p>
+
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book20.jpg" alt="">
+
+                            <h2 class="featured_title">Concepcion</h2>
+                            <p>Albert Samaha</p>
+
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/featured-book21.jpg" alt="">
+
+                            <h2 class="featured_title">A Calling for Charlie</h2>
+                            <p>Joshua Ferris</p>
+
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="featured_card swiper-slide">
+                            <img src="assets/book-10.png" alt="">
+
+                            <h2 class="featured_title">A Shock</h2>
+                            <p>Keith Ridgway</p>
+
+                            <div class="featured_prices">
+                                <span class="featured_discount">999 Rs/-</span>
+                                <span class="featured_price">1999 Rs/-</span>
+                            </div>
+
+                            <button class="button">Add To Cart</button>
+
+                            <div class="featured_actions">
+                                <button><i class="ri-search-line"></i></button>
+
+                                <button><i class="ri-heart-3-line"></i></button>
+
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--==================== DISCOUNT ====================-->
+        <section class="discount section" id="about">
+            <div class="discount_container container grid">
+                <div class="discount_data" data-aos="fade-in" data-aos-delay="600ms">
+                    <h2 class="discount_title section_title">
+                        <span class="first">Why</span> choose eBook !!
+                    </h2>
+                    <p class="discount_description">
+                        Choosing our e-book platform is an investment in an unparalleled literary experience. Our
+                        commitment to readers goes beyond a simple book repository; it's about creating a vibrant
+                        community and fostering a love for literature. The diverse collection spanning genres ensures
+                        there's something for every reader, making exploration an exciting journey. Our user-friendly
+                        interface prioritizes seamless navigation and an enjoyable reading experience. What sets us
+                        apart is not just the books but the innovative features like a customizable dark mode,
+                        interactive sliders, and personalized recommendations, adding layers of engagement to your
+                        reading sessions.
+                    </p>
+
+                    <a href="#" class="button">Show more</a>
+                </div>
+
+                <div class="discount_images">
+                    <img class="discount_img-1" src="assets/discount-book-1.png" alt="">
+                    <img class="discount_img-2" src="assets/discount-book-2.png" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <!--==================== NEW BOOKS ====================-->
+        <section class="new section" id="new">
+            <h2 class="section_title">
+                New <span class="first">Releases</span>;
+            </h2>
+            <p class="section_para">
+                "Dive into fresh narratives with our latest ebook releases!"
+            </p>
+
+            <div class="new_container container" data-aos="fade-up" data-aos-delay="600ms">
+                <div class="new_swiper swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book23.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title"> This Close to Okay;</h2>
+                                <p>Leesa Cross-Smith</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book24.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title">The Bass Rock</h2>
+                                <p>Evie Wyld</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book25.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title">The Making of Incarnation</h2>
+                                <p>Tom McCarthy</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book26.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title">Middletown</h2>
+                                <p>Sarah Moon</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book27.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title"> The FSG Poetry Anthology</h2>
+                                <p>Robyn Creswell</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book28.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title">The Ones We’re Meant</h2>
+                                <p>Joan He</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book29.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title"> A History of Wild</h2>
+                                <p>Shea Ernshaw</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book30.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title">King Richard</h2>
+                                <p>Michael Dobbs</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="new_swiper swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book23.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title"> This Close to Okay;</h2>
+                                <p>Leesa Cross-Smith</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book24.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title">The Bass Rock</h2>
+                                <p>Evie Wyld</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book25.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title">The Making of Incarnation</h2>
+                                <p>Tom McCarthy</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book26.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title">Middletown</h2>
+                                <p>Sarah Moon</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book27.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title"> The FSG Poetry Anthology</h2>
+                                <p>Robyn Creswell</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book28.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title">The Ones We’re Meant</h2>
+                                <p>Joan He</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book29.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title"> A History of Wild</h2>
+                                <p>Shea Ernshaw</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="nav_card swiper-slide">
+                            <img src="assets/featured-book30.jpg" alt="" class="new_img">
+
+                            <div>
+                                <h2 class="new_title">King Richard</h2>
+                                <p>Michael Dobbs</p>
+                                <div class="new_prices">
+                                    <span class="new_discount">699 Rs/-</span>
+                                    <span class="new_price">1599 Rs/-</span>
+                                </div>
+
+                                <div class="new_stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== JOIN ====================-->
+        <section class="join section" id="join">
+            <div class="join_container">
+                <img class="join_bg" src="assets/sub bg.jpg" alt="">
+
+                <div class="join_data container grid">
+                    <h2 class="join_title section_title">
+                        Subscribe To Get <br>
+                        Latest Information
+                    </h2>
+
+                    <form action="https://formsubmit.co/d2a256100b58d5298df90efb37187eb1" method="post"
+                        class="join_form">
+                        <input type="email" placeholder="Your Email" class="join_input">
+                        <button type="submit" class="join_button button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== TESTIMONIAL ====================-->
+        <section class="testimonial section" id="testimonial">
+            <h2 class="section_title">
+                <span class="first">Customer</span> Opinions;
+            </h2>
+
+            <p class="testimonial_para">
+                that's what top buyers from our website said abut us..
+            </p>
+
+            <div class="testimonial_container container" data-aos="fade-up" data-aos-delay="600ms">
+                <div class="testimonial_swiper swiper">
+                    <div class="swiper-wrapper">
+                        <article class="testimonial_card swiper-slide">
+                            <img class="testimonial_img" src="assets/testimonial-perfil-1.png" alt="">
+
+                            <h2 class="testimonial_title">Sophia Turner</h2>
+                            <p class="testimonial_description">
+                                "Immersive stories, seamless interface. eBook is my go-to for literary escapes. Highly
+                                recommended!"
+                            </p>
+
+                            <div class="testimonial_stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </div>
+                        </article>
+
+                        <article class="testimonial_card swiper-slide">
+                            <img class="testimonial_img" src="assets/testimonial-perfil-2.png" alt="">
+
+                            <h2 class="testimonial_title">Noah Harrison</h2>
+                            <p class="testimonial_description">
+                                "eBook: where imagination meets innovation. Outstanding collection and a
+                                reader-friendly platform."
+                            </p>
+
+                            <div class="testimonial_stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </div>
+                        </article>
+
+                        <article class="testimonial_card swiper-slide">
+                            <img class="testimonial_img" src="assets/testimonial-perfil-3.png" alt="">
+
+                            <h2 class="testimonial_title">Emma Sullivan</h2>
+                            <p class="testimonial_description">
+                                "eBook exceeds expectations! Engaging e-books, user-friendly design—a bookworm's dream
+                                come true."
+                            </p>
+
+                            <div class="testimonial_stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </div>
+                        </article>
+
+                        <article class="testimonial_card swiper-slide">
+                            <img class="testimonial_img" src="assets/testimonial-perfil-4.png" alt="">
+
+                            <h2 class="testimonial_title">Elijah Parker</h2>
+                            <p class="testimonial_description">
+                                The best website to buy books, the purchase
+                                is very easy to make and has great discounts.
+                            </p>
+
+                            <div class="testimonial_stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+        <div class="container contact_container">
+            <div class="contact_left">
+                <h2>Let's <span class="first">Connect</span> !!</h2>
+                <p>
+                    Our digital library is a treasure trove for book enthusiasts seeking captivating narratives and
+                    literary adventures. Join a community of avid readers who share a passion for the written word, and
+                    let's connect over the stories that captivate our hearts and minds.
+                </p>
+                <ul class="contact_socials">
+
+                    <a href="#" target="_blank" class="footer_socials_links"><i class="ri-linkedin-line"></i></a>
+                    <a href="#" target="_blank" class="footer_socials_links"><i class="ri-instagram-line"></i></a>
+                    <a href="#" target="_blank" class="footer_socials_links"><i class="ri-github-line"></i></a>
+                    <!--<li><a href="" target="_blank"><i class="uil uil-instagram"></i></a></li>
+                    <li><a href="" target="_blank"><i class="uil uil-linkedin"></i></a></li>
+                    <li><a href="" target="_blank"><i class="uil uil-google"></i></a></li>-->
+                </ul>
+            </div>
+            <form action="/signup" method="post" class="contact_form">
+                <input type="text" name="name" placeholder="Your Name">
+                <input type="email" name="email" placeholder="Your Email">
+                <input type="text" name="msg" rows="6" placeholder="Message"></input>
+                <button type="submit" class="button">SEND <i class="uil uil-corner-down-right-alt"></i> </button>
+            </form>
+        </div>
+    </section>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer_container container grid" data-aos="fade-up" data-aos-delay="600ms">
+            <div class="footer_head">
+                <a href="#" class="footer_logo"><i class="fa-solid fa-book-open-reader"></i></i>eBook</a>
+
+                <p class="footer_description">
+                    Find and explore the best <br>
+                    eBooks from all your <br>
+                    favorite writers.
+                </p>
+            </div>
+
+            <div class="footer_data grid">
+                <div>
+                    <h3 class="footer_title">
+                        About
+                    </h3>
+
+                    <ul class="footer_links">
+                        <li>
+                            <a href="#contact" class="footer_link">Awards</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="footer_link">FAQs</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="footer_link">Privacy policy</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="footer_link">Terms of services</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer_title">
+                        Company
+                    </h3>
+
+                    <ul class="footer_links">
+                        <li>
+                            <a href="#contact" class="footer_link">Blog</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="footer_link">Community</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="footer_link">Our Team</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="footer_link">Hep Centre</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer_title">
+                        Contact
+                    </h3>
+
+                    <ul class="footer_links">
+                        <li>
+                            <addres class="footer_info">
+                                ABESIT College Of Engineering <br>
+                                ABESIT Campus Rd, <br>
+                                near Crossing Republik, NE-3, <br>
+                                Crossings Republik, Ghaziabad, <br>
+                                Uttar Pradesh 201009
+                            </addres>
+                        </li>
+                        <li>
+                            <addres class="footer_info">
+                                bharatbisht3107@gmail.com <br>
+                                +91 931 1023 507
+                            </addres>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer_title">
+                        Socials
+                    </h3>
+
+                    <div class="footer_socials">
+                        <a href="#" target="_blank" class="footer_socials_links"><i class="ri-linkedin-line"></i></a>
+                        <a href="#" target="_blank" class="footer_socials_links"><i class="ri-instagram-line"></i></a>
+                        <a href="#" target="_blank" class="footer_socials_links"><i class="ri-github-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <span class="footer_copy">
+            &#169; BHARAT BISHT || BTECH CSE (2st year) || ABESIT , GHAZAIABAD
+        </span>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+
+    <a href="#" id="scroll_up" class="scroll_up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+    <!--=============== SCROLLREVEAL ===============-->
+    <!-- <script src="java script/scrollreveal.min.js"></script> -->
+
+
+
+    <!-- SWIPER JS -->
+
+    <script src="/javascripts/swiper-bundle.min.js"></script>
+
+    <!-- SCROLL REVEAL -->
+
+    <!--<script src="java script/scrollreveal.min.js"></script>-->
+
+    <!-- AOS JS -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init({ duration: 1500, offset: 80 });
+    </script>
+
+    <!-- MAIN JS -->
+
+    <script src="/javascripts/main.js"></script>
+    <script src="https://kit.fontawesome.com/2c44b97502.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
