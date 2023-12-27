@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/ebook");
 
-const userSchema = new mongoose.Schema({
+
+const contactSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -14,13 +14,10 @@ const userSchema = new mongoose.Schema({
     lowercase: true, // Converts the email to lowercase
     match: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/, // Basic email format validation
   },
-
   msg: {
     type: String,
-   
-    // Assumes a 10-digit phone number format
   },
 });
 
 // Create the User model based on the schema
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("Contact", contactSchema);
