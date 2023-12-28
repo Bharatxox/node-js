@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- WEB HOST LOGO  -->
+
+    <link rel="icon" href="assets/icon-ebook.png" type="image/png">
+
+    <!-- REMIX ICONS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- ICON SCOUT-->
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!--FONTS : POPPINS / OUTFIT / MONTAGU / MONTSERRAT-->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Outfit:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- SWIPER JS -->
+
+    <link rel="stylesheet" href="/stylesheets/swiper-bundle.min.css" />
+
+    <!-- AOS JS -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- STYLE-SHEET -->
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <title>E-book</title>
+
+</head>
+
+<body>
+
+
+
+    <!-- ========== NAV / HEADER  ==========-->
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav_logo">
+                <i class="fa-solid fa-book-open-reader"></i> eBook
+            </a>
+
+            <div class="nav_menu">
+                <ul class="nav_list">
+
+                    <li class="nav_item">
+                        <a href="#home" class="nav_link active_link">
+                            <i class="ri-home-4-line"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#featured" class="nav_link">
+                            <i class="ri-book-3-line"></i>
+                            <span>Featured</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#recommended" class="nav_link">
+                            <i class="ri-price-tag-3-line"></i>
+                            <span>Recommended</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#new" class="nav_link">
+                            <i class="ri-bookmark-line"></i>
+                            <span>Latest</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#testimonial" class="nav_link">
+                            <i class="ri-message-3-line"></i>
+                            <span>Review</span>
+                        </a>
+                    </li>
+
+                    <!--<li class="nav_item">
+                        <a href="#" class="nav_link">
+                            <i class="ri-home-line"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>-->
+
+                </ul>
+            </div>
+
+            <div class="nav_actions">
+                <i class="ri-search-line search-button" id="search-button"></i>
+
+                <i class="ri-user-3-line login-button" id="login-button"></i>
+
+                <i class="ri-moon-line theme-button" id="theme-button"></i>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- ========== SEARCH ========== -->
+
+
+
+    <div class="search" id="search-content">
+        <form action="" class="search_form">
+            <!--<i class="ri-search-line search_icon"></i>-->
+            <input type="search" placeholder="looking for something!?" class="search_input">
+        </form>
+
+        <i class="ri-close-line search_close" id="search-close"></i>
+    </div>
+
+
+
+    <!-- ========== LOGIN ========== -->
+
+
+
+    <div class="login grid" id="login-content">
+        <form action="" class="login_form grid">
+            <h3 class="login_title">Log In</h3>
+
+            <div class="login_group grid">
+                <div>
+                    <label for="login-email" class="login_label">Email</label>
+                    <input type="email" placeholder="Write Your Email" id="login-email" class="login_input">
+                </div>
+            </div>
+
+            <div class="login_group grid">
+                <div>
+                    <label for="login-pass" class="login_label">Password</label>
+                    <input type="password" placeholder="Enter Your Password" id="login-pass" class="login_input">
+                </div>
+            </div>
+
+            <div>
+                <span class="login_singup">
+                    You Don't Have An Account!? <a href="#">Sign Up</a>
+                </span>
+
+                <a href="#" class="login_forgot">
+                    You forgot your password
+                </a>
+
+                <button type="submit" class="login_button button">
+                    Log In
+                </button>
+            </div>
+        </form>
+
+        <i class="ri-close-line login_close" id="login-close"></i>
+    </div>
+
+

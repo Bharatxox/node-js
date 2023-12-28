@@ -7,6 +7,12 @@ var router = express.Router();
 router.get("/", function (req, res, next) {
   res.render("index");
 });
+router.get("/signup", function (req, res, next) {
+  res.render("signup");
+});
+router.get("/login", function (req, res, next) {
+  res.render("login");
+});
 
 router.post("/contact", async function (req, res) {
   const { email, name, phone } = req.body;
