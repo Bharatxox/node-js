@@ -40,7 +40,7 @@ router.get("/logout", function (req, res, next) {
   });
 });
 
-router.post("/signup", function (req, res) {
+router.post("/register", function (req, res) {
   const { email, username, name, phone, password } = req.body;
   const userData = new userModel({ email, username, phone, name });
   console.log(password);
