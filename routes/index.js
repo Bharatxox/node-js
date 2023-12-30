@@ -8,15 +8,37 @@ passport.use(new localStrategy(userModel.authenticate()));
 
 /* GET home page. */
 router.get("/", isLogggedin, function (req, res, next) {
-  const userdata = req.session.passport.user
-  console.log(userdata)
-  res.render("index",{user:userdata});
+  const userdata = req.session.passport.user;
+  console.log(userdata);
+  res.render("index", { user: userdata });
 });
 router.get("/signup", function (req, res, next) {
   res.render("signup");
 });
 router.get("/login", function (req, res, next) {
-  res.render("login",{ error: req.flash("error") });
+  res.render("login", { error: req.flash("error") });
+});
+
+router.get("/dash", async function (req, res, next) {
+  const userdata = await userModel.find();
+  res.render("dash", { user: userdata });
+});
+
+router.get("/edit/:userID", async (req, res) => {
+  const userID = req.params.userID;
+  const userData = await userModel.findById(userID);
+  res.render("edit", { user: userData });
+});
+
+router.post("/update/:userID", async (req, res) => {
+  const userID = req.params.userID;
+  const updatedData = req.body;
+  try {
+    await userModel.findByIdAndUpdate(userID, updatedData);
+    res.redirect("/dash");
+  } catch (error) {
+    res.status(500).send("Error updating user data");
+  }
 });
 
 //------- passport authentication routes ---------->
