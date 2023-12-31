@@ -41,6 +41,16 @@ router.post("/update/:userID", async (req, res) => {
   }
 });
 
+router.get("/delete/:userId", async (req, res) => {
+  const userId = req.params.userId;
+  try {
+    await userModel.findByIdAndDelete(userId);
+    res.redirect("/dash")
+  } catch (error) {
+    res.status(500).send("Error updating user data");
+  }
+});
+
 //------- passport authentication routes ---------->
 
 router.post("/contact", async function (req, res) {
