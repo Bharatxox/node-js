@@ -9,11 +9,11 @@ passport.use(new localStrategy(userModel.authenticate()));
 /* GET home page. */
 router.get("/", isLogggedin, function (req, res, next) {
   const userdata = req.session.passport.user;
-  console.log(userdata);
+
   res.render("index", { user: userdata });
 });
 router.get("/signup", function (req, res, next) {
-  res.render("signup");
+  res.render("signup", { error: req.flash("error") });
 });
 router.get("/login", function (req, res, next) {
   res.render("login", { error: req.flash("error") });
@@ -45,7 +45,7 @@ router.get("/delete/:userId", async (req, res) => {
   const userId = req.params.userId;
   try {
     await userModel.findByIdAndDelete(userId);
-    res.redirect("/dash")
+    res.redirect("/dash");
   } catch (error) {
     res.status(500).send("Error updating user data");
   }
@@ -75,7 +75,10 @@ router.get("/logout", function (req, res, next) {
 router.post("/register", function (req, res) {
   const { email, username, name, phone, password } = req.body;
   const userData = new userModel({ email, username, phone, name });
+<<<<<<< HEAD
   // console.log(password);
+=======
+>>>>>>> f48992e2c116bfca6cae0182feb35c880fad21f4
 
   userModel
     .register(userData, password)
@@ -85,8 +88,20 @@ router.post("/register", function (req, res) {
       });
     })
     .catch((error) => {
+<<<<<<< HEAD
       console.error(error);
      
+=======
+      let errorMessage = error.message;
+
+      // Check if the error is a MongoDB duplicate key error
+      if (error.code === 11000 && error.keyPattern && error.keyPattern.email) {
+        errorMessage =
+          "Email already in use. Please choose a different email address.";
+      }
+
+      res.render("signup", { error: errorMessage });
+>>>>>>> f48992e2c116bfca6cae0182feb35c880fad21f4
       // Handle registration failure, e.g., redirect to a registration error page
     });
 });
@@ -101,6 +116,7 @@ router.post(
   function (req, res) {}
 );
 
+<<<<<<< HEAD
 // router.post(
 //   "/signup",
 //   passport.authenticate("local", {
@@ -110,6 +126,8 @@ router.post(
 //   }),
 //   function (req, res) {}
 // );
+=======
+>>>>>>> f48992e2c116bfca6cae0182feb35c880fad21f4
 function isLogggedin(req, res, next) {
   if (req.isAuthenticated()) return next();
   res.redirect("login");
