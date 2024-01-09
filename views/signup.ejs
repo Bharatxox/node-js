@@ -17,6 +17,9 @@
       <form action="/register" method="post">
         <!-- Name Field -->
         <div class="mb-4">
+          <% if(error){ %>
+            <p class="text-red-600"><%- error %></p>
+            <% } %>
           <label for="name" class="block text-sm font-medium text-gray-600"
             >Name</label
           >

@@ -75,7 +75,7 @@ router.get("/logout", function (req, res, next) {
 router.post("/register", function (req, res) {
   const { email, username, name, phone, password } = req.body;
   const userData = new userModel({ email, username, phone, name });
-  console.log(password);
+  // console.log(password);
 
   userModel
     .register(userData, password)
@@ -86,6 +86,7 @@ router.post("/register", function (req, res) {
     })
     .catch((error) => {
       console.error(error);
+     
       // Handle registration failure, e.g., redirect to a registration error page
     });
 });
@@ -99,6 +100,16 @@ router.post(
   }),
   function (req, res) {}
 );
+
+// router.post(
+//   "/signup",
+//   passport.authenticate("local", {
+//     successRedirect: "/",
+//     failureRedirect: "/signup",
+//     failureFlash: true,
+//   }),
+//   function (req, res) {}
+// );
 function isLogggedin(req, res, next) {
   if (req.isAuthenticated()) return next();
   res.redirect("login");
