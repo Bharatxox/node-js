@@ -75,10 +75,6 @@ router.get("/logout", function (req, res, next) {
 router.post("/register", function (req, res) {
   const { email, username, name, phone, password } = req.body;
   const userData = new userModel({ email, username, phone, name });
-<<<<<<< HEAD
-  // console.log(password);
-=======
->>>>>>> f48992e2c116bfca6cae0182feb35c880fad21f4
 
   userModel
     .register(userData, password)
@@ -88,10 +84,6 @@ router.post("/register", function (req, res) {
       });
     })
     .catch((error) => {
-<<<<<<< HEAD
-      console.error(error);
-     
-=======
       let errorMessage = error.message;
 
       // Check if the error is a MongoDB duplicate key error
@@ -101,7 +93,7 @@ router.post("/register", function (req, res) {
       }
 
       res.render("signup", { error: errorMessage });
->>>>>>> f48992e2c116bfca6cae0182feb35c880fad21f4
+
       // Handle registration failure, e.g., redirect to a registration error page
     });
 });
@@ -116,7 +108,6 @@ router.post(
   function (req, res) {}
 );
 
-<<<<<<< HEAD
 // router.post(
 //   "/signup",
 //   passport.authenticate("local", {
@@ -126,8 +117,7 @@ router.post(
 //   }),
 //   function (req, res) {}
 // );
-=======
->>>>>>> f48992e2c116bfca6cae0182feb35c880fad21f4
+
 function isLogggedin(req, res, next) {
   if (req.isAuthenticated()) return next();
   res.redirect("login");
