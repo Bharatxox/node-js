@@ -1,6 +1,16 @@
 <% include ./partials/header.ejs %>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var messageContainer = document.getElementById('messageContainer');
+      
+      if (messageContainer) {
+        setTimeout(function() {
+          messageContainer.style.display = 'none';
+        }, 5000);
+      }
+    });
+  </script>
     <!-- ========== MAIN ========== -->
-
     <main class="main">
 
         <!-- ========== HOME ==========-->
@@ -8,6 +18,21 @@
         <section class="home section" id="home">
             <div class="home_container container grid">
                 <div class="home_data" data-aos="fade-in" data-aos-delay="600ms">
+                    <% if (successMessage || errorMessage) { %>
+                        <div id="messageContainer">
+                          <% if (successMessage) { %>
+                            <div class="success-message" id="successMessage"><%= successMessage %></div>
+                          <% } %>
+                      
+                          <% if (errorMessage) { %>
+                            <div class="error-message" id="errorMessage"><%= errorMessage %></div>
+                          <% } %>
+                      
+                        
+                        </div>
+                      <% } %>
+                      
+                      
                     <h1 class="home_title">
                         Discover Your Next Adventure & Explore Endless Worlds of Knowledge.
                     </h1>

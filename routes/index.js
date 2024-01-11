@@ -10,7 +10,11 @@ passport.use(new localStrategy(userModel.authenticate()));
 router.get("/", isLogggedin, function (req, res, next) {
   const userdata = req.session.passport.user;
 
-  res.render("index", { user: userdata });
+  res.render("index", {
+    user: userdata,
+    successMessage: req.flash("success"),
+    errorMessage: req.flash("error"),
+  });
 });
 router.get("/signup", function (req, res, next) {
   res.render("signup", { error: req.flash("error") });
@@ -54,6 +58,7 @@ router.get("/delete/:userId", async (req, res) => {
 //------- passport authentication routes ---------->
 
 router.post("/contact", async function (req, res) {
+<<<<<<< HEAD
   const { email, name, phone } = req.body;
   const user = await contModel.create({
     name: name,
@@ -61,7 +66,32 @@ router.post("/contact", async function (req, res) {
     phoneNumber: phone,
   });
   res.redirect("/index");
+=======
+  const { email, name, msg} = req.body;
+
+  try {
+    //  contModel is a Mongoose model
+    await contModel.create({ name, email, msg });
+
+    // Clear any existing flash messages
+    req.flash("success", "");
+    req.flash("error", ""); 
+
+    // Set a success flash message
+    req.flash("success", "Your data has been recorded successfully!");
+  } catch (error) {
+    // Clear any existing flash messages
+    req.flash("success", "");
+    
+    // Set an error flash message if there's an issue
+    req.flash("error", "There was an error recording your data.");
+  }
+
+  // Redirect to the home page
+  res.redirect("/");
+>>>>>>> 7db83f896533a512bfd8a6a89c421456781b3e9d
 });
+
 
 router.get("/logout", function (req, res, next) {
   req.logout(function (err) {
