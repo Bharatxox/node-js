@@ -54,13 +54,9 @@ router.get("/delete/:userId", async (req, res) => {
 //------- passport authentication routes ---------->
 
 router.post("/contact", async function (req, res) {
-  const { email, name, phone } = req.body;
-  const user = await contModel.create({
-    name: name,
-    email: email,
-    phoneNumber: phone,
-  });
-  res.send(user);
+  const { email, name, msg } = req.body;
+  await contModel.create({ name, email, msg });
+  res.redirect("/");
 });
 
 router.get("/logout", function (req, res, next) {
