@@ -60,7 +60,7 @@ router.post("/contact", async function (req, res) {
     email: email,
     phoneNumber: phone,
   });
-  res.send(user);
+  res.redirect("/index");
 });
 
 router.get("/logout", function (req, res, next) {
