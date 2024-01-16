@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>User Details</title>
+  <title>User Details</title> -->
   <!-- Include Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/stylesheets/dash.css" />
 </head>
 
 <body class="bg-gray-100 h-screen flex items-center justify-center">
-  <div class="bg-white p-8 rounded shadow-md max-w-2xl w-full">
+  <div class="bg-white p-8 rounded shadow-md max-w-2xl w-full"> -->
     <!-- Table Header -->
-    <div class="mb-6">
+    <!-- <div class="mb-6">
       <h2 class="text-2xl font-semibold mb-4">User Details</h2>
       <table class="min-w-full bg-white border border-gray-300">
         <thead>
@@ -22,10 +22,10 @@
             <th class="py-2 px-4 border-b">Username</th>
             <th class="py-2 px-4 border-b">Email</th>
           </tr>
-        </thead>
+        </thead> -->
         <!-- ... (other HTML code) ... -->
 
-        <tbody>
+        <!-- <tbody>
           <% user.forEach((e)=> { %>
             <tr>
               <td class="py-2 px-4 border-b">
@@ -45,18 +45,18 @@
               </td>
             </tr>
             <% }) %>
-        </tbody>
+        </tbody> -->
 
         <!-- ... (other HTML code) ... -->
 
-      </table>
+      <!-- </table>
 
       
     </div>
   </div>
-  <div class="bg-white p-8 rounded shadow-md max-w-2xl w-full">
+  <div class="bg-white p-8 rounded shadow-md max-w-2xl w-full"> -->
     <!-- Table Header -->
-    <div class="mb-6">
+    <!-- <div class="mb-6">
       <h2 class="text-2xl font-semibold mb-4">Contact Details</h2>
       <table class="min-w-full bg-white border border-gray-300">
         <thead>
@@ -65,9 +65,9 @@
             <th class="py-2 px-4 border-b">Message</th>
             <th class="py-2 px-4 border-b">Email</th>
           </tr>
-        </thead>
+        </thead> -->
         <!-- ... (other HTML code) ... -->
-
+<!-- 
         <tbody>
           <% cont.forEach((e)=> { %>
             <tr>
@@ -78,7 +78,7 @@
               </td>
               <td class="py-2 px-4 border-b">
                 <%= e.email %>
-              </td>
+              </td> -->
 
               <!-- <td class="py-2 px-4 border-b">
                 <a href="/edit/<%= e._id %>" class="text-blue-500">Edit</a>
@@ -86,15 +86,91 @@
               <td class="py-2 px-4 border-b">
                 <a href="/delete/<%= e._id %>" class="text-blue-500">Delete</a>
               </td> -->
-            </tr>
+            <!-- </tr>
             <% }) %>
-        </tbody>
+        </tbody> -->
 
         <!-- ... (other HTML code) ... -->
 
-      </table>
+      <!-- </table>
 
       
+    </div>
+  </div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/stylesheets/dash.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+  <style>
+    body{
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 min-w-2xl w-full p-4">
+    <!-- User Details Table -->
+    <div class="bg-white p-5 rounded shadow-md">
+      <h2 class="text-2xl font-semibold mb-4 text-center font-bold">User Details</h2>
+      <table class="min-w-full bg-white border border-gray-300">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b">Full Name</th>
+            <th class="py-2 px-4 border-b">Username</th>
+            <th class="py-2 px-4 border-b">Email</th>
+            <th class="py-2 px-4 border-b">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% user.forEach((e)=> { %>
+            <tr>
+              <td class="py-2 px-4 border-b"><%= e.name %></td>
+              <td class="py-2 px-4 border-b">@<%= e.username %></td>
+              <td class="py-2 px-4 border-b"><%= e.email %></td>
+              <td class="py-2 px-4 border-b">
+                <a href="/edit/<%= e._id %>" class="text-blue-500">Edit</a>
+                <span class="mx-2">|</span>
+                <a href="/delete/<%= e._id %>" class="text-red-500">Delete</a>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Contact Details Table -->
+    <div class="bg-white p-5 rounded shadow-md">
+      <h2 class="text-2xl font-semibold mb-4 text-center font-bold">Contact Details</h2>
+      <table class="min-w-full bg-white border border-gray-300">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b">Full Name</th>
+            <th class="py-2 px-4 border-b">Message</th>
+            <th class="py-2 px-4 border-b">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% cont.forEach((e)=> { %>
+            <tr>
+              <td class="py-2 px-4 border-b"><%= e.name %></td>
+              <td class="py-2 px-4 border-b"><%= e.msg %></td>
+              <td class="py-2 px-4 border-b"><%= e.email %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
     </div>
   </div>
 </body>
