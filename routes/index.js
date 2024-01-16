@@ -25,7 +25,8 @@ router.get("/login", function (req, res, next) {
 
 router.get("/dash", async function (req, res, next) {
   const userdata = await userModel.find();
-  res.render("dash", { user: userdata });
+  const contData = await contModel.find()
+  res.render("dash", { user: userdata,cont:contData });
 });
 
 router.get("/edit/:userID", async (req, res) => {
@@ -58,15 +59,6 @@ router.get("/delete/:userId", async (req, res) => {
 //------- passport authentication routes ---------->
 
 router.post("/contact", async function (req, res) {
-<<<<<<< HEAD
-  const { email, name, phone } = req.body;
-  const user = await contModel.create({
-    name: name,
-    email: email,
-    phoneNumber: phone,
-  });
-  res.redirect("/index");
-=======
   const { email, name, msg} = req.body;
 
   try {
@@ -89,7 +81,6 @@ router.post("/contact", async function (req, res) {
 
   // Redirect to the home page
   res.redirect("/");
->>>>>>> 7db83f896533a512bfd8a6a89c421456781b3e9d
 });
 
 

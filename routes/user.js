@@ -20,11 +20,7 @@ const userSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-<<<<<<< HEAD
-    required:true,
-=======
     required: true,
->>>>>>> 7db83f896533a512bfd8a6a89c421456781b3e9d
     // You may want to add validation for phone number format
   },
   username: {
