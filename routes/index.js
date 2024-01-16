@@ -8,10 +8,19 @@ passport.use(new localStrategy(userModel.authenticate()));
 
 /* GET home page. */
 router.get("/", isLogggedin, function (req, res, next) {
-  const userdata = req.session.passport.user;
+  const userdata = req.user.name; // ajay pandey
+  function getInitials(name) {
+    const arrayInit = name.split(" ");
+    if (arrayInit === 1) {
+      return name.toUpperCase();
+    }
+    const data = arrayInit.map((name) => name[0].toUpperCase()).join("");
+    return data;
+  }
+  const initNames = getInitials(userdata);
 
   res.render("index", {
-    user: userdata,
+    user: initNames,
     successMessage: req.flash("success"),
     errorMessage: req.flash("error"),
   });
@@ -59,7 +68,7 @@ router.get("/delete/:userId", async (req, res) => {
 //------- passport authentication routes ---------->
 
 router.post("/contact", async function (req, res) {
-  const { email, name, msg} = req.body;
+  const { email, name, msg } = req.body;
 
   try {
     //  contModel is a Mongoose model
@@ -67,14 +76,14 @@ router.post("/contact", async function (req, res) {
 
     // Clear any existing flash messages
     req.flash("success", "");
-    req.flash("error", ""); 
+    req.flash("error", "");
 
     // Set a success flash message
     req.flash("success", "Your data has been recorded successfully!");
   } catch (error) {
     // Clear any existing flash messages
     req.flash("success", "");
-    
+
     // Set an error flash message if there's an issue
     req.flash("error", "There was an error recording your data.");
   }
@@ -82,7 +91,6 @@ router.post("/contact", async function (req, res) {
   // Redirect to the home page
   res.redirect("/");
 });
-
 
 router.get("/logout", function (req, res, next) {
   req.logout(function (err) {
@@ -96,6 +104,7 @@ router.get("/logout", function (req, res, next) {
 router.post("/register", function (req, res) {
   const { email, username, name, phone, password } = req.body;
   const userData = new userModel({ email, username, phone, name });
+  console.log(password);
 
   userModel
     .register(userData, password)
