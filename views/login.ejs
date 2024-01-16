@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <title>Login</title>
-    <!-- Add Tailwind CSS CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -12,10 +12,12 @@
   </head>
   <body class="bg-gray-100 h-screen flex items-center justify-center">
     <div class="bg-white p-8 rounded shadow-md w-96">
+      <div class="">
+        <i class="fa-solid fa-book-open-reader"></i> eBook
+      </div>
       <h2 class="text-2xl font-semibold mb-6">Login</h2>
 
       <form action="#" method="post">
-        <!-- Username Field -->
         <div class="mb-4">
           <% if(error){ %>
           <p class="text-red-600"><%- error %></p>
@@ -27,12 +29,10 @@
             type="text"
             id="username"
             name="username"
-            placeholder="johndoe"
+            placeholder="Enter your username"
             class="mt-1 p-2 w-full border rounded"
           />
         </div>
-
-        <!-- Password Field -->
         <div class="mb-6">
           <label for="password" class="block text-sm font-medium text-gray-600"
             >Password</label
@@ -41,12 +41,10 @@
             type="password"
             id="password"
             name="password"
-            placeholder="********"
+            placeholder="Entre your password"
             class="mt-1 p-2 w-full border rounded"
           />
         </div>
-
-        <!-- Submit Button -->
         <button
           type="submit"
           class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
@@ -57,4 +55,96 @@
       <a href="/signup"> <button class="w-full mt-2 bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Signup</button> </a>
     </div>
   </body>
+</html> 
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Contact Form Template</title>
+        <link rel="stylesheet" href="/build/tailwind.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    </head> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"> -->
+  <!-- <link rel="stylesheet" href="/build/tailwind.css" type="text/css" media="screen" title="no title" charset="utf-8" /> -->
+
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class>
+  <div class="lg:flex">
+    <div class="lg:w-1/2 xl:max-w-screen-sm">
+      <div class="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
+        <!-- <div class="cursor-pointer flex items-center">
+          <div>
+            <i class="fa-solid fa-book-open-reader fa-2xl" style="color: #C3073F;;"></i>
+          </div>
+          <div class="text-[40px] ml-2 font-extrabold tracking-[-4px] ">eBook</div>
+        </div> -->
+      </div>
+      <div class="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+        <% if(error){ %>
+          <p class="text-red-600"><%- error %></p>
+          <% } %>
+        <h2 class="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
+                    xl:text-bold">Log in</h2>
+        <div class="mt-12">
+          <form action="/login" method="post" >
+            <div>
+              <div class="text-sm font-bold text-gray-700 tracking-wide">Username</div>
+              <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                type="text" name="username" placeholder="Enter your Username">
+            </div>
+            <div class="mt-8">
+              <div class="flex justify-between items-center">
+                <div class="text-sm font-bold text-gray-700 tracking-wide">
+                  Password
+                </div>
+                <!-- <div>
+                  <a class="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800
+                                        cursor-pointer">
+                    Forgot Password?
+                  </a>
+                </div> -->
+              </div>
+              <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                type="password" name="password"  placeholder="Enter your password">
+            </div>
+            <div class="mt-10">
+              <button  type="submit" class="bg-red-500 text-gray-100 p-4 w-full rounded-full tracking-wide
+                                font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
+                                shadow-lg">
+                Log In
+              </button>
+            </div>
+          </form>
+          <div class="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
+            Don't have an account ? <a href="/signup" class="cursor-pointer text-indigo-600 hover:text-indigo-800">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden lg:flex items-center justify-center bg-indigo-100 flex-1 h-screen relative">
+      <!-- Illustration or image goes here -->
+      <img src="https://images.unsplash.com/photo-1618365908648-e71bd5716cba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover w-full h-full inset-0">
+    </div>
+  </div>
+</body>
+<script src="https://kit.fontawesome.com/2c44b97502.js" crossorigin="anonymous"></script>
+
 </html>

@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration Form</title>
+    <title>Registration Form</title> -->
     <!-- Add Tailwind CSS CDN -->
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
@@ -14,9 +14,9 @@
     <div class="bg-white p-8 rounded shadow-md w-96">
       <h2 class="text-2xl font-semibold mb-6">Registration Form</h2>
 
-      <form action="/register" method="post">
+      <form action="/register" method="post"> -->
         <!-- Name Field -->
-        <div class="mb-4">
+        <!-- <div class="mb-4">
           <% if(error){ %>
             <p class="text-red-600"><%- error %></p>
             <% } %>
@@ -30,10 +30,10 @@
             placeholder="John Doe"
             class="mt-1 p-2 w-full border rounded"
           />
-        </div>
+        </div> -->
 
         <!-- Username Field -->
-        <div class="mb-6">
+        <!-- <div class="mb-6">
           <label for="username" class="block text-sm font-medium text-gray-600"
             >Username</label
           >
@@ -44,9 +44,9 @@
             placeholder="johndoe"
             class="mt-1 p-2 w-full border rounded"
           />
-        </div>
+        </div> -->
         <!-- Email Field -->
-        <div class="mb-4">
+        <!-- <div class="mb-4">
           <label for="email" class="block text-sm font-medium text-gray-600"
             >Email</label
           >
@@ -58,10 +58,10 @@
             placeholder="john@example.com"
             class="mt-1 p-2 w-full border rounded"
           />
-        </div>
+        </div> -->
 
         <!-- Password Field -->
-        <div class="mb-4">
+        <!-- <div class="mb-4">
           <label for="password" class="block text-sm font-medium text-gray-600"
             >Password</label
           >
@@ -72,10 +72,10 @@
             placeholder="********"
             class="mt-1 p-2 w-full border rounded"
           />
-        </div>
+        </div> -->
 
         <!-- Phone Field -->
-        <div class="mb-4">
+        <!-- <div class="mb-4">
           <label for="phone" class="block text-sm font-medium text-gray-600"
             >Phone</label
           >
@@ -86,10 +86,10 @@
             placeholder="123-456-7890"
             class="mt-1 p-2 w-full border rounded"
           />
-        </div>
+        </div> -->
 
         <!-- Submit Button -->
-        <button
+        <!-- <button
           type="submit"
           class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
         >
@@ -100,4 +100,109 @@
 
     </div>
   </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Include necessary meta tags, title, and CSS links -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="">
+
+  <div class="lg:flex">
+    <!-- Left side with the form -->
+    <div class="lg:w-1/2 xl:max-w-screen-sm">
+      <!-- <div class="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
+        <div class="cursor-pointer flex items-center">
+          <div>
+            <i class="fa-solid fa-book-open-reader fa-2xl" style="color: #C3073F;"></i>
+          </div>
+          <div class="text-[40px] ml-2 font-extrabold tracking-[-4px]">eBook</div>
+        </div>
+      </div> -->
+
+      <div class="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+
+        <!-- Sign-up form -->
+        <h2 class="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
+                    xl:text-bold">Sign Up</h2>
+
+        <!-- Form with new fields -->
+        <form action="/register" method="post">
+          <% if(error){ %>
+            <p class="text-red-600"><%- error %></p>
+            <% } %>
+
+          <div class="mt-12">
+            <!-- Full Name -->
+            <div>
+              <div class="text-sm font-bold text-gray-700 tracking-wide">Full Name</div>
+              <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                type="text" name="name" placeholder="Enter your Full Name">
+            </div>
+
+            <!-- Username -->
+            <div class="mt-8">
+              <div class="text-sm font-bold text-gray-700 tracking-wide">Username</div>
+              <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                type="text" name="username" placeholder="Enter your Username">
+            </div>
+
+            <!-- Email -->
+            <div class="mt-8">
+              <div class="text-sm font-bold text-gray-700 tracking-wide">Email</div>
+              <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                type="email" name="email" placeholder="Enter your Email">
+            </div>
+
+            <!-- Password -->
+            <div class="mt-8">
+              <div class="text-sm font-bold text-gray-700 tracking-wide">Password</div>
+              <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                type="password" name="password" placeholder="Enter your password">
+            </div>
+
+            <!-- Phone Number -->
+            <div class="mt-8">
+              <div class="text-sm font-bold text-gray-700 tracking-wide">Phone Number</div>
+              <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                type="tel" name="phone" placeholder="Enter your Phone Number">
+            </div>
+
+            <!-- Sign-up button -->
+            <div class="mt-10">
+              <button type="submit" class="bg-red-500 text-gray-100 p-4 w-full rounded-full tracking-wide
+                                font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
+                                shadow-lg">
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Link to login page -->
+        <div class="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
+          Already have an account? <a href="/login" class="cursor-pointer text-indigo-600 hover:text-indigo-800">Log in</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right side with an illustration (if desired) -->
+    <div class="hidden lg:flex items-center justify-center bg-indigo-100 flex-1 h-screen relative">
+      <!-- Illustration or image goes here -->
+      <img src="https://images.unsplash.com/photo-1533669955142-6a73332af4db?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover w-full h-full inset-0">
+    </div>
+  </div>
+
+  <!-- Font Awesome script -->
+  <script src="https://kit.fontawesome.com/2c44b97502.js" crossorigin="anonymous"></script>
+
+</body>
+
 </html>

@@ -281,14 +281,14 @@ body.dark-theme {
 }
 
 .nav_actions i {
-    font-size: 1.25rem;
-    color: var(--z-tooltip);
+    font-size: 1.5rem;
+    color: #4E4E50;
     cursor: pointer;
     transition: color 0.4s;
 }
 
 .nav_actions i:hover {
-    color: var(--first-color);
+    color: #C3073F;
 }
 
 /* active link */
@@ -305,7 +305,7 @@ body.dark-theme {
 
 /* ========== SEARCH ========== */
 
-.search {
+/* .search {
     position: fixed;
     top: -100%;
     left: 0;
@@ -316,7 +316,7 @@ body.dark-theme {
     backdrop-filter: blur(16px);
     padding: 8rem 1.5rem;
     transition: top 0.4s;
-}
+} */
 
 .search_form {
     display: flex;
@@ -949,12 +949,21 @@ form {
     margin-top: 2rem;
 }
 
-form input,
-textarea {
+form input {
     padding: 1rem;
     border-radius: 0.5em;
     background-color: #4e4e500f;
 }
+#messageForm{
+    height: 250px;
+    position: relative;
+}
+#messageForm::placeholder{
+    position: absolute;
+    top: 1rem;
+
+}
+
 
 /*=============== FOOTER ===============*/
 

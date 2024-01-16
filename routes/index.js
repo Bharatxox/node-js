@@ -8,7 +8,7 @@ passport.use(new localStrategy(userModel.authenticate()));
 
 /* GET home page. */
 router.get("/", isLogggedin, function (req, res, next) {
-  const userdata = req.user.name; // ajay pandey
+  const userdata = req.user.name; 
   function getInitials(name) {
     const arrayInit = name.split(" ");
     if (arrayInit === 1) {
@@ -104,7 +104,7 @@ router.get("/logout", function (req, res, next) {
 router.post("/register", function (req, res) {
   const { email, username, name, phone, password } = req.body;
   const userData = new userModel({ email, username, phone, name });
-  console.log(password);
+  
 
   userModel
     .register(userData, password)
